@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; background: #10151c; color: #dbe4ee; }
+header { display: flex; align-items: center; justify-content: space-between; padding: 10px 18px; background: #18202b; border-bottom: 1px solid #2a3646; }
+h1 { font-size: 20px; margin: 0; letter-spacing: 2px; }
+button { background: #2f6fed; color: #fff; border: 0; border-radius: 6px; padding: 7px 14px; cursor: pointer; font-size: 13px; }
+button.warn { background: #8a4b2a; }
+button.small { padding: 2px 8px; font-size: 12px; }
+main { display: flex; gap: 12px; padding: 12px; align-items: flex-start; }
+.canvas-wrap { flex: 0 0 auto; }
+canvas { background: #0b0f14; border: 1px solid #2a3646; border-radius: 8px; display: block; }
+.legend { display: flex; gap: 14px; font-size: 12px; padding: 8px 4px; color: #9fb0c3; flex-wrap: wrap; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; }
+.dot.station { background: #6fb3ff; }
+.dot.locked { background: #ffd166; }
+.line { display: inline-block; width: 18px; height: 3px; margin-right: 4px; vertical-align: middle; }
+.line.loop { background: #ff9f43; }
+.line.ellipse { background: #54d98c; }
+.line.resid { background: #ff5d5d; }
+.line.flipped { background: #c792ea; }
+aside { flex: 1; min-width: 380px; max-height: 90vh; overflow-y: auto; }
+details { background: #18202b; border: 1px solid #2a3646; border-radius: 8px; margin-bottom: 8px; }
+summary { cursor: pointer; padding: 8px 12px; font-weight: 600; font-size: 13px; }
+.panel { padding: 4px 12px 10px; font-size: 12px; }
+table { border-collapse: collapse; width: 100%; }
+th, td { text-align: left; padding: 3px 6px; border-bottom: 1px solid #243041; white-space: nowrap; }
+th { color: #8fa3bb; font-weight: 500; }
+.loop-item { padding: 5px 8px; border-radius: 6px; cursor: pointer; margin-bottom: 4px; background: #141b25; }
+.loop-item.active { outline: 2px solid #ff9f43; }
+.bad { color: #ff7b7b; }
+.good { color: #54d98c; }
+.dim { color: #8fa3bb; }
+input.w { width: 52px; background: #0b0f14; color: #dbe4ee; border: 1px solid #2a3646; border-radius: 4px; padding: 2px 4px; }
+.tag { display: inline-block; padding: 0 6px; border-radius: 4px; font-size: 11px; margin-left: 4px; }
+.tag.flip { background: #c792ea; color: #10151c; }
+.tag.rt { background: #2a3646; }
+a { color: #6fb3ff; }

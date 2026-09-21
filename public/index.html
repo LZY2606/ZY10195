@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>地下环闭合仪</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+  <h1>地下环闭合仪</h1>
+  <div class="actions">
+    <button id="btn-adjust">运行平差</button>
+    <button id="btn-reset" class="warn">清空并重新导入算例</button>
+  </div>
+</header>
+<main>
+  <section class="canvas-wrap">
+    <canvas id="view" width="900" height="640"></canvas>
+    <div class="legend">
+      <span><i class="dot station"></i>测站</span>
+      <span><i class="dot locked"></i>锁定控制点</span>
+      <span><i class="line loop"></i>选中闭合路</span>
+      <span><i class="line ellipse"></i>误差椭球(1σ,夸大)</span>
+      <span><i class="line resid"></i>残差向量(夸大)</span>
+      <span><i class="line flipped"></i>翻转候选</span>
+    </div>
+  </section>
+  <aside>
+    <details open><summary>网结构摘要</summary><div id="summary" class="panel"></div></details>
+    <details open><summary>闭合路列表</summary><div id="loops" class="panel"></div></details>
+    <details open><summary>法方程诊断</summary><div id="diag" class="panel"></div></details>
+    <details open><summary>测站（点击锁定/解锁）</summary><div id="stations" class="panel"></div></details>
+    <details open><summary>观测（权重 / 翻转候选）</summary><div id="obs" class="panel"></div></details>
+    <details open><summary>平差后坐标</summary><div id="coords" class="panel"></div></details>
+    <details><summary>运行记录</summary><div id="runs" class="panel"></div></details>
+  </aside>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
