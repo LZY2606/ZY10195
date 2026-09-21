@@ -1,0 +1,33 @@
+:root { color-scheme: dark; font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif; background: #0d1117; color: #e6edf3; }
+body { margin: 0; }
+header { display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 22px 28px; background: linear-gradient(135deg, #172033, #10151d); border-bottom: 1px solid #30363d; }
+h1 { margin: 0; font-size: 30px; letter-spacing: .08em; }
+h2 { font-size: 18px; margin: 0 0 12px; }
+h3 { font-size: 15px; margin: 18px 0 8px; color: #9ad7ff; }
+p { margin: 6px 0; color: #9da7b3; }
+button, select, input { border: 1px solid #444c56; background: #161b22; color: #e6edf3; border-radius: 7px; padding: 8px 10px; }
+button { cursor: pointer; background: #1f6feb; border-color: #1f6feb; font-weight: 600; }
+button:hover { filter: brightness(1.12); }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+main { padding: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.panel { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 16px; min-width: 0; }
+.wide { grid-column: 1 / -1; }
+.controls { display: flex; flex-direction: column; gap: 10px; }
+.controls label { display: grid; gap: 5px; color: #9da7b3; font-size: 13px; }
+.panel-title { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+canvas { width: 100%; background: #0d1117; border: 1px solid #30363d; border-radius: 10px; }
+.hint { font-size: 12px; }
+.message { min-height: 20px; color: #7ee787; font-size: 13px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }
+.metric { background: #0d1117; border: 1px solid #30363d; padding: 10px; border-radius: 8px; }
+.metric b { display: block; font-size: 18px; color: #79c0ff; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { border-bottom: 1px solid #30363d; padding: 6px 8px; text-align: right; white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { color: #9ad7ff; position: sticky; top: 0; background: #161b22; }
+.table-wrap { max-height: 360px; overflow: auto; margin-top: 10px; }
+.badge { display: inline-block; padding: 2px 7px; border-radius: 99px; background: #21262d; border: 1px solid #444c56; margin: 2px; font-size: 12px; }
+.bad { color: #ff7b72; }
+.good { color: #7ee787; }
+.warn { color: #d29922; }
+@media (max-width: 900px) { main { grid-template-columns: 1fr; } header { flex-direction: column; align-items: flex-start; } }

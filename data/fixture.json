@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "name": "洞穴导线验收固定数据",
+  "stations": [
+    {
+      "id": "A",
+      "name": "洞口A",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "locked": true
+    },
+    {
+      "id": "B",
+      "name": "石室B",
+      "x": 10.002853,
+      "y": -0.1746,
+      "z": 0.809331,
+      "locked": false
+    },
+    {
+      "id": "C",
+      "name": "竖井C",
+      "x": 11.766191,
+      "y": 11.624172,
+      "z": 2.205324,
+      "locked": false
+    },
+    {
+      "id": "D",
+      "name": "同名点",
+      "x": 4.866191,
+      "y": 6.824172,
+      "z": 1.305324,
+      "locked": false
+    },
+    {
+      "id": "E",
+      "name": "支洞E",
+      "x": -3.838558,
+      "y": 5.131107,
+      "z": -0.291932,
+      "locked": false
+    },
+    {
+      "id": "F",
+      "name": "同名点",
+      "x": 100,
+      "y": 100,
+      "z": 20,
+      "locked": false
+    },
+    {
+      "id": "G",
+      "name": "孤洞G",
+      "x": 101,
+      "y": 100,
+      "z": 20,
+      "locked": false
+    },
+    {
+      "id": "H",
+      "name": "孤洞H",
+      "x": 102,
+      "y": 101,
+      "z": 20.414214,
+      "locked": false
+    }
+  ],
+  "observations": [
+    {
+      "id": "obs-ab-1",
+      "from_station_id": "A",
+      "to_station_id": "B",
+      "slope_distance": 10.02,
+      "azimuth_deg": 91.0,
+      "inclination_deg": 3.2,
+      "instrument_height": 1.45,
+      "target_height": 1.2,
+      "weight": 1.0
+    },
+    {
+      "id": "obs-ba-1",
+      "from_station_id": "B",
+      "to_station_id": "A",
+      "slope_distance": 10.01,
+      "azimuth_deg": 271.2,
+      "inclination_deg": -3.1,
+      "instrument_height": 1.3,
+      "target_height": 1.55,
+      "weight": 1.0
+    },
+    {
+      "id": "obs-bc-1",
+      "from_station_id": "B",
+      "to_station_id": "C",
+      "slope_distance": 12.0,
+      "azimuth_deg": 8.5,
+      "inclination_deg": 6.2,
+      "instrument_height": 1.35,
+      "target_height": 1.25,
+      "weight": 1.0
+    },
+    {
+      "id": "obs-cd-1",
+      "from_station_id": "C",
+      "to_station_id": "D",
+      "slope_distance": 8.465,
+      "azimuth_deg": 235.176,
+      "inclination_deg": -6.785,
+      "instrument_height": 1.4,
+      "target_height": 1.3,
+      "weight": 1.0
+    },
+    {
+      "id": "obs-da-1",
+      "from_station_id": "D",
+      "to_station_id": "A",
+      "slope_distance": 8.483,
+      "azimuth_deg": 35.492,
+      "inclination_deg": 8.879,
+      "instrument_height": 1.396,
+      "target_height": 1.4,
+      "weight": 1.0
+    },
+    {
+      "id": "obs-ae-1",
+      "from_station_id": "A",
+      "to_station_id": "E",
+      "slope_distance": 6.42,
+      "azimuth_deg": 323.2,
+      "inclination_deg": -3.5,
+      "instrument_height": 1.4,
+      "target_height": 1.3,
+      "weight": 0.8
+    },
+    {
+      "id": "obs-fg-1",
+      "from_station_id": "F",
+      "to_station_id": "G",
+      "slope_distance": null,
+      "azimuth_deg": 90,
+      "inclination_deg": 0,
+      "instrument_height": 1.4,
+      "target_height": 1.4,
+      "weight": 0.7
+    },
+    {
+      "id": "obs-gh-1",
+      "from_station_id": "G",
+      "to_station_id": "H",
+      "slope_distance": null,
+      "azimuth_deg": 45,
+      "inclination_deg": 45,
+      "instrument_height": 0.4,
+      "target_height": 1.4,
+      "weight": 0.7
+    }
+  ],
+  "flip_candidates": [
+    {
+      "id": "flip-da-1",
+      "original_observation_id": "obs-da-1",
+      "from_station_id": "A",
+      "to_station_id": "D",
+      "active": false,
+      "note": "现场记录疑似把 A-D 边的测站写反；候选保留原观测，不覆盖往返证据。"
+    }
+  ]
+}

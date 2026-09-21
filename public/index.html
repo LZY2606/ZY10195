@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>地下环闭合仪</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <h1>地下环闭合仪</h1>
+      <p>三维洞穴导线图 · 最小独立闭合环 · 正规方程诊断 · 观测修正</p>
+    </div>
+    <div class="actions">
+      <button id="rerun">重新平差</button>
+      <button id="export">导出运行记录</button>
+      <button id="reset">清空并重导</button>
+      <button id="import">导入复核</button>
+      <input id="importFile" type="file" accept="application/json" hidden />
+    </div>
+  </header>
+
+  <main>
+    <section class="panel wide">
+      <div class="panel-title"><h2>站点图</h2><span id="summary"></span></div>
+      <canvas id="networkCanvas" width="900" height="430"></canvas>
+      <p class="hint">黑字为站点 ID；名称相同但 ID 不同不会合并。实线为当前生效边，虚线为未启用翻转候选，红/蓝箭头为水平残差分量。</p>
+    </section>
+
+    <section class="panel controls">
+      <h2>操作</h2>
+      <label>控制点<select id="stationSelect"></select></label>
+      <button id="lockToggle">锁定/解锁</button>
+      <label>观测<select id="observationSelect"></select></label>
+      <label>权重<input id="weightInput" type="number" min="0" step="0.1" /></label>
+      <button id="weightButton">更新权重</button>
+      <label>翻转候选<select id="flipSelect"></select></label>
+      <button id="flipToggle">启用/停用候选</button>
+      <button id="createFlip">为选中观测新建翻转候选</button>
+      <div id="message" class="message"></div>
+    </section>
+
+    <section class="panel">
+      <h2>正规方程诊断</h2>
+      <div id="diagnostics"></div>
+      <h3>秩亏与不可识别自由度</h3>
+      <div id="defects"></div>
+    </section>
+
+    <section class="panel wide">
+      <h2>独立闭合环</h2>
+      <div id="loops"></div>
+      <h3>往返观测证据（不作为独立环覆盖）</h3>
+      <div id="reciprocals"></div>
+    </section>
+
+    <section class="panel wide">
+      <div class="panel-title"><h2>误差椭球</h2><span>95% 置信，三轴投影；秩亏站点标红</span></div>
+      <canvas id="ellipsoidCanvas" width="900" height="330"></canvas>
+      <div id="coordinates"></div>
+    </section>
+
+    <section class="panel wide">
+      <div class="panel-title"><h2>残差向量与观测修正</h2><span>角度残差按最短环绕解释</span></div>
+      <canvas id="residualCanvas" width="900" height="320"></canvas>
+      <div class="table-wrap" id="residuals"></div>
+      <h3>修正后坐标</h3>
+      <div class="table-wrap" id="coordinates"></div>
+    </section>
+
+    <section class="panel wide">
+      <h2>运行记录</h2>
+      <div id="runs"></div>
+    </section>
+  </main>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

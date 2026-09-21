@@ -1,0 +1,19 @@
+{
+  "name": "underground-loop-closure",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "地下环闭合仪：三维洞穴导线环闭合、秩亏诊断与平差修正",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "start": "tsx src/server.ts",
+    "build": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "pnpm@12.5.1"
+}
